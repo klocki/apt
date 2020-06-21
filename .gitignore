@@ -1,0 +1,7 @@
+/\venv_apt/
+/__pycache__/
+/.vscode/
+config.yaml
+readme.txt
+Spielwiese.ipynb
+*.csv

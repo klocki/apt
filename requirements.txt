@@ -1,4 +1,4 @@
-﻿allure-pytest==2.8.6
+allure-pytest==2.8.6
 allure-python-commons==2.8.6
 atomicwrites==1.4.0
 attrs==19.3.0

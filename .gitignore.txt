@@ -1,6 +1,0 @@
-\venv_apt\
-config.yaml
-url.csv
-url_backup.csv
-*.csv
-*.yaml

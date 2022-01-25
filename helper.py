@@ -19,7 +19,7 @@ def analyze_and_add_db_history(df_url, df_db):
     df_url = pd.merge(df_url, min_price, on = 'url_short', how = 'left')
     df_url = pd.merge(df_url, initial_date[['url_short', 'initial_date', 'initial_price']], on = 'url_short', how = 'left')
     df_url = pd.merge(df_url, current_date[['url_short', 'current_date', 'current_price', 'current_regular_price', 'f_deal', 'name']], on = 'url_short', how = 'left')
-    df_url['f_notification'] = df_url['last_price'] > df_url['current_price']
+    df_url['f_notification'] = df_url['last_price'] - 0.5 > df_url['current_price']
     # for price in [price for price in df_url.keys() if price.find('price') != -1]:
     #     df_url[price] = df_url[price].apply(lambda x: "{:,.2f}€".format(x))
     df_url = df_url[['url', 'e_mail', 'name', 'f_deal', 'current_price', 'current_regular_price', 'last_price', 'all_time_min_price', 'all_time_max_price', 'initial_price', 'initial_date', 'current_date', 'f_notification', 'url_short', 'error']]
